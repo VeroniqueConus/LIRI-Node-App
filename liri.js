@@ -1,11 +1,15 @@
-//<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-//search: function({ type: 'artist OR album OR track', query: 'My search query', limit: 20 }, callback);
-
+var fs = require("fs");
+var moment = require("moment");
 var Spotify = require('node-spotify-api');
-var  Env = require('dotenv').config();
+var omdbRequest = require("request");
 var keys = require("./keys.js");
+var  Env = require('dotenv').config();
 var spotify = new Spotify(keys.spotify);
  
+var inputType = process.argv[2];
+var entries = process.argv.slice(3);
+var request = entries.join(" ");
+
 spotify
     .search({ type: 'track', query: 'All the Small Things' })
     .then(function(response) {
@@ -24,12 +28,12 @@ spotify
     console.error('Error occurred: ' + err)
   });
 
-const db = require('db')
-db.connect({
-  host: process.env.DB_HOST,
-  username: process.env.DB_USER,
-  password: process.env.DB_PASS
-});
+// const db = require('db')
+// db.connect({
+//   host: process.env.DB_HOST,
+//   username: process.env.DB_USER,
+//   password: process.env.DB_PASS
+// });
  
 const result = dotenv.config() 
     if (result.error) {

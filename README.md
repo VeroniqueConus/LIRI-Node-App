@@ -24,3 +24,8 @@ axios.post('/save', { firstName: 'Marlon', lastName: 'Bernardes' })
 * BandsinTown needs to email API Key
 * Bands in Town info here https://app.swaggerhub.com/apis-docs/Bandsintown/PublicAPI/3.0.0#/artist%20events/artistEvents
 
+* Make it so liri.js can take in one of the following commands:
+concert-this
+spotify-this-song
+movie-this
+do-what-it-says

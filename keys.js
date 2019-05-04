@@ -9,4 +9,7 @@ exports.omdb = {
   api_key: 'cb684d38'
 };
 
-//waiting on Band API
+// waiting on Band API
+// //exports.bandsintown = { 
+//   id: ' ',
+// }
